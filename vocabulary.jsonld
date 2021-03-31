@@ -1,328 +1,109 @@
-[
-  {
-    "@id": "https://mosaicrown.github.io/ns#purpose",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:ub1bL732C14"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Has Purpose"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The purpose on which the Rule is being subjected."
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#declinationOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#purpose"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Declination Of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#purpose"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A Purpose transitively asserts that another Purpose encompasses its operational semantics."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "The purpose is to explicitly assert that the semantics of the referenced instance of an other Purpose encompasses (includes) the semantics of this instance of Purpose. The declinationOf property is transitive, and as such, the purposes form ancestor relationships."
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#belongsTo",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Belongs To"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "An Assignee transitively asserts that another Assigne encompasses its operational permissions."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#note": [
-      {
-        "@language": "en",
-        "@value": "The purpose is to explicitly assert that the semantics of the referenced instance of an other Assignee encompasses (includes) the semantics of this instance of Assignee. The belongsTo property is transitive, and as such, the permissions form ancestor relationships."
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#statistical",
-    "@type": [
-      "https://mosaicrown.github.io/ns#purpose",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Statistical"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A statistical purpose"
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#marketing",
-    "@type": [
-      "https://mosaicrown.github.io/ns#purpose",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Marketing"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A marketing purpose"
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#institutional",
-    "@type": [
-      "https://mosaicrown.github.io/ns#purpose",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Institutional"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "An institutional purpose"
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#use",
-    "@type": [
-      "http://www.w3.org/ns/odrl/2/action",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Use"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The Action to use a target"
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#write",
-    "@type": [
-      "http://www.w3.org/ns/odrl/2/action",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Write"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The Action to write a target"
-      }
-    ],
-    "http://www.w3.org/ns/odrl/2/includedIn": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#use"
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#read",
-    "@type": [
-      "http://www.w3.org/ns/odrl/2/action",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Read"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The Action to read a target"
-      }
-    ],
-    "http://www.w3.org/ns/odrl/2/includedIn": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#use"
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#sell",
-    "@type": [
-      "http://www.w3.org/ns/odrl/2/action",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Sell"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The Action to sell a target"
-      }
-    ]
-  },
-  {
-    "@id": "https://mosaicrown.github.io/ns#sellreport",
-    "@type": [
-      "http://www.w3.org/ns/odrl/2/action",
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Sellreport"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The Action to sell a report of a target"
-      }
-    ],
-    "http://www.w3.org/ns/odrl/2/includedIn": [
-      {
-        "@id": "https://mosaicrown.github.io/ns#sell"
-      }
-    ]
-  }
-]
+{
+  "@context": [
+    "./context.jsonld",
+    {
+      "Concept": "skos:Concept",
+      "Property": "rdf:Property",
+      "ObjectProperty": "owl:ObjectProperty",
+      "TransitiveProperty": "owl:TransitiveProperty",
+      "domain": {"@id": "rdfs:domain", "@type": "@id"},
+      "range": {"@id": "rdfs:range", "@type": "@id"},
+      "isDefinedBy": {"@id": "rdfs:isDefinedBy", "@type": "@id"},
+      "label": {"@id": "rdfs:label", "@language": "en"},
+      "definition": {"@id": "skos:definition", "@language": "en"},
+      "note": {"@id": "skos:note", "@language": "en"},
+      
+      "@base": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "mosaicrown:purpose",
+      "@type": [ "Concept", "Property", "ObjectProperty"],
+      "domain": "_:ub1bL732C14",
+      "range": "mosaicrown:",
+      "isDefinedBy": "",
+      "label": "Has Purpose",
+      "definition": "The purpose on which the Rule is being subjected."
+    },
+    {
+      "@id": "mosaicrown:declinationOf",
+      "@type": ["Concept", "Property", "ObjectProperty", "TransitiveProperty"],
+      "domain": "mosaicrown:purpose",
+      "range": "mosaicrown:purpose",
+      "isDefinedBy": "",
+      "label": "Declination Of",
+      "definition": "A Purpose transitively asserts that another Purpose encompasses its operational semantics.",
+      "note": "The purpose is to explicitly assert that the semantics of the referenced instance of an other Purpose encompasses (includes) the semantics of this instance of Purpose. The declinationOf property is transitive, and as such, the purposes form ancestor relationships."
+    },
+    {
+      "@id": "mosaicrown:belongsTo",
+      "@type": ["Concept", "Property", "ObjectProperty", "TransitiveProperty"],
+      "domain": "mosaicrown:",
+      "range": "mosaicrown:",
+      "isDefinedBy": "",
+      "label": "Belongs To",
+      "definition": "An Assignee transitively asserts that another Assigne encompasses its operational permissions.",
+      "note": "The purpose is to explicitly assert that the semantics of the referenced instance of an other Assignee encompasses (includes) the semantics of this instance of Assignee. The belongsTo property is transitive, and as such, the permissions form ancestor relationships."
+    },
+    {
+      "@id": "mosaicrown:statistical",
+      "@type": ["Concept", "purpose"],
+      "isDefinedBy": "",
+      "label": "Statistical",
+      "definition": "A statistical purpose"
+    },
+    {
+      "@id": "mosaicrown:marketing",
+      "@type": ["Concept", "purpose"],
+      "isDefinedBy": "",
+      "label": "Marketing",
+      "definition": "A marketing purpose"
+    },
+    {
+      "@id": "mosaicrown:institutional",
+      "@type": ["Concept", "purpose"],
+      "isDefinedBy": "",
+      "label": "Institutional",
+      "definition": "An institutional purpose"
+    },
+    {
+      "@id": "mosaicrown:use",
+      "@type": ["Concept", "action"],
+      "isDefinedBy": "",
+      "label": "Use",
+      "definition": "The Action to use a target"
+    },
+    {
+      "@id": "mosaicrown:write",
+      "@type": ["Concept", "action"],
+      "includedIn": "mosaicrown:use",
+      "isDefinedBy": "",
+      "label": "Write",
+      "definition": "The Action to write a target"
+    },
+    {
+      "@id": "mosaicrown:read",
+      "@type": ["Concept", "action"],
+      "includedIn": "mosaicrown:use",
+      "isDefinedBy": "",
+      "label": "Read",
+      "definition": "The Action to read a target"
+    },
+    {
+      "@id": "mosaicrown:sell",
+      "@type": ["Concept", "action"],
+      "isDefinedBy": "",
+      "label": "Sell",
+      "definition": "The Action to sell a target"
+    },
+    {
+      "@id": "mosaicrown:sellreport",
+      "@type": ["Concept", "action"],
+      "includedIn": "mosaicrown:sell",
+      "isDefinedBy": "mosaicrown:",
+      "label": "Sellreport",
+      "definition": "The Action to sell a report of a target"
+    }
+  ]
+}
