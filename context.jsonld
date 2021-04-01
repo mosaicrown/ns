@@ -10,10 +10,7 @@
          "statistical":    "mosaicrown:statistical",
          "marketing":      "mosaicrown:marketing",
          "institutional":  "mosaicrown:institutional",
-         "use":            "mosaicrown:use",
-         "read":           "mosaicrown:read",
-         "write":          "mosaicrown:write",
-         "sell":           "mosaicrown:sell",
+         "write":          "odrl:modify",
          "sellreport":     "mosaicrown:sellreport"
       }
    ]

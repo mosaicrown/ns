@@ -79,39 +79,9 @@
       "definition": "An institutional purpose"
     },
     {
-      "@id": "mosaicrown:use",
-      "@type": ["Concept", "Action"],
-      "isDefinedBy": "",
-      "label": "Use",
-      "definition": "The Action to use a target"
-    },
-    {
-      "@id": "mosaicrown:write",
-      "@type": ["Concept", "Action"],
-      "includedIn": "mosaicrown:use",
-      "isDefinedBy": "",
-      "label": "Write",
-      "definition": "The Action to write a target"
-    },
-    {
-      "@id": "mosaicrown:read",
-      "@type": ["Concept", "Action"],
-      "includedIn": "mosaicrown:use",
-      "isDefinedBy": "",
-      "label": "Read",
-      "definition": "The Action to read a target"
-    },
-    {
-      "@id": "mosaicrown:sell",
-      "@type": ["Concept", "Action"],
-      "isDefinedBy": "",
-      "label": "Sell",
-      "definition": "The Action to sell a target"
-    },
-    {
       "@id": "mosaicrown:sellreport",
       "@type": ["Concept", "Action"],
-      "includedIn": "mosaicrown:sell",
+      "includedIn": "odrl:sell",
       "isDefinedBy": "",
       "label": "Sellreport",
       "definition": "The Action to sell a report of a target"
