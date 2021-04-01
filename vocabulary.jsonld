@@ -12,16 +12,27 @@
       "label": {"@id": "rdfs:label", "@language": "en"},
       "definition": {"@id": "skos:definition", "@language": "en"},
       "note": {"@id": "skos:note", "@language": "en"},
+      "unionOf": {"@id": "owl:unionOf", "@type": "@id", "@container": "@list"},
       
       "@base": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
     }
   ],
   "@graph": [
     {
+      "@id": "mosaicrown:Purpose",
+      "@type": [ "Concept", "rdfs:Class", "owl:Class"],
+      "isDefinedBy": "",
+      "label": "Purpose",
+      "definition": "The purpose of an (intended) action on a resource."
+    },
+    {
       "@id": "mosaicrown:purpose",
       "@type": [ "Concept", "Property", "ObjectProperty"],
-      "domain": "_:ub1bL732C14",
-      "range": "mosaicrown:",
+      "domain": {
+        "@type": "owl:Class",
+        "unionOf": [ "odrl:Rule", "odrl:Policy" ]
+      },
+      "range": "mosaicrown:Purpose",
       "isDefinedBy": "",
       "label": "Has Purpose",
       "definition": "The purpose on which the Rule is being subjected."
@@ -29,18 +40,18 @@
     {
       "@id": "mosaicrown:declinationOf",
       "@type": ["Concept", "Property", "ObjectProperty", "TransitiveProperty"],
-      "domain": "mosaicrown:purpose",
-      "range": "mosaicrown:purpose",
+      "domain": "mosaicrown:Purpose",
+      "range": "mosaicrown:Purpose",
       "isDefinedBy": "",
       "label": "Declination Of",
       "definition": "A Purpose transitively asserts that another Purpose encompasses its operational semantics.",
-      "note": "The purpose is to explicitly assert that the semantics of the referenced instance of an other Purpose encompasses (includes) the semantics of this instance of Purpose. The declinationOf property is transitive, and as such, the purposes form ancestor relationships."
+      "note": "The goal is to explicitly assert that the semantics of the referenced instance of an other Purpose encompasses (includes) the semantics of this instance of Purpose. The declinationOf property is transitive, and as such, the purposes form ancestor relationships."
     },
     {
       "@id": "mosaicrown:belongsTo",
       "@type": ["Concept", "Property", "ObjectProperty", "TransitiveProperty"],
-      "domain": "mosaicrown:",
-      "range": "mosaicrown:",
+      "domain": "odrl:Party",
+      "range": "odrl:Party",
       "isDefinedBy": "",
       "label": "Belongs To",
       "definition": "An Assignee transitively asserts that another Assigne encompasses its operational permissions.",
@@ -48,35 +59,35 @@
     },
     {
       "@id": "mosaicrown:statistical",
-      "@type": ["Concept", "purpose"],
+      "@type": ["Concept", "Purpose"],
       "isDefinedBy": "",
       "label": "Statistical",
       "definition": "A statistical purpose"
     },
     {
       "@id": "mosaicrown:marketing",
-      "@type": ["Concept", "purpose"],
+      "@type": ["Concept", "Purpose"],
       "isDefinedBy": "",
       "label": "Marketing",
       "definition": "A marketing purpose"
     },
     {
       "@id": "mosaicrown:institutional",
-      "@type": ["Concept", "purpose"],
+      "@type": ["Concept", "Purpose"],
       "isDefinedBy": "",
       "label": "Institutional",
       "definition": "An institutional purpose"
     },
     {
       "@id": "mosaicrown:use",
-      "@type": ["Concept", "action"],
+      "@type": ["Concept", "Action"],
       "isDefinedBy": "",
       "label": "Use",
       "definition": "The Action to use a target"
     },
     {
       "@id": "mosaicrown:write",
-      "@type": ["Concept", "action"],
+      "@type": ["Concept", "Action"],
       "includedIn": "mosaicrown:use",
       "isDefinedBy": "",
       "label": "Write",
@@ -84,7 +95,7 @@
     },
     {
       "@id": "mosaicrown:read",
-      "@type": ["Concept", "action"],
+      "@type": ["Concept", "Action"],
       "includedIn": "mosaicrown:use",
       "isDefinedBy": "",
       "label": "Read",
@@ -92,16 +103,16 @@
     },
     {
       "@id": "mosaicrown:sell",
-      "@type": ["Concept", "action"],
+      "@type": ["Concept", "Action"],
       "isDefinedBy": "",
       "label": "Sell",
       "definition": "The Action to sell a target"
     },
     {
       "@id": "mosaicrown:sellreport",
-      "@type": ["Concept", "action"],
+      "@type": ["Concept", "Action"],
       "includedIn": "mosaicrown:sell",
-      "isDefinedBy": "mosaicrown:",
+      "isDefinedBy": "",
       "label": "Sellreport",
       "definition": "The Action to sell a report of a target"
     }
