@@ -10,6 +10,8 @@ designed by the [MOSAICrOWN project][1]:
 * [vocabulary](./vocabulary.jsonld) [[jsonld](./vocabulary.jsonld)]
 * [context](./context.jsonld) 
 
+These files are maintained on [`github.com/mosaicrown/ns`](https://github.com/mosaicrown/ns).
+
 MOSAICrOWN has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 825333.
 
 [1]: https://mosaicrown.eu/
