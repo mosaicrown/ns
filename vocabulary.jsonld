@@ -6,13 +6,13 @@
       "Property": "rdf:Property",
       "ObjectProperty": "owl:ObjectProperty",
       "TransitiveProperty": "owl:TransitiveProperty",
-      "domain": {"@id": "rdfs:domain", "@type": "@id"},
-      "range": {"@id": "rdfs:range", "@type": "@id"},
+      "unionOf": {"@id": "owl:unionOf", "@type": "@vocab", "@container": "@list"},
+      "domain": {"@id": "rdfs:domain", "@type": "@vocab"},
+      "range": {"@id": "rdfs:range", "@type": "@vocab"},
       "isDefinedBy": {"@id": "rdfs:isDefinedBy", "@type": "@id"},
       "label": {"@id": "rdfs:label", "@language": "en"},
       "definition": {"@id": "skos:definition", "@language": "en"},
       "note": {"@id": "skos:note", "@language": "en"},
-      "unionOf": {"@id": "owl:unionOf", "@type": "@id", "@container": "@list"},
       
       "@base": "https://mosaicrown.github.io/ns/vocabulary.jsonld"
     }
@@ -58,6 +58,21 @@
       "note": "The purpose is to explicitly assert that the semantics of the referenced instance of an other Assignee encompasses (includes) the semantics of this instance of Assignee. The belongsTo property is transitive, and as such, the permissions form ancestor relationships."
     },
     {
+      "@id": "mosaicrown:sellreport",
+      "@type": ["Concept", "Action"],
+      "includedIn": "odrl:sell",
+      "isDefinedBy": "",
+      "label": "Sellreport",
+      "definition": "The Action to sell a report of a target"
+    },
+    {
+      "@id": "mosaicrown:institutional",
+      "@type": ["Concept", "Purpose"],
+      "isDefinedBy": "",
+      "label": "Institutional",
+      "definition": "An institutional purpose"
+    },
+    {
       "@id": "mosaicrown:statistical",
       "@type": ["Concept", "Purpose"],
       "isDefinedBy": "",
@@ -70,21 +85,6 @@
       "isDefinedBy": "",
       "label": "Marketing",
       "definition": "A marketing purpose"
-    },
-    {
-      "@id": "mosaicrown:institutional",
-      "@type": ["Concept", "Purpose"],
-      "isDefinedBy": "",
-      "label": "Institutional",
-      "definition": "An institutional purpose"
-    },
-    {
-      "@id": "mosaicrown:sellreport",
-      "@type": ["Concept", "Action"],
-      "includedIn": "odrl:sell",
-      "isDefinedBy": "",
-      "label": "Sellreport",
-      "definition": "The Action to sell a report of a target"
     }
   ]
 }
