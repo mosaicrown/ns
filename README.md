@@ -7,7 +7,7 @@ MOSAICrOWN Namespace
 This repository hosts vocabularies and JSON-LD contexts
 designed by the [MOSAICrOWN project][1]:
 
-* [vocabulary](./vocabulary.jsonld) [[jsonld](./vocabulary.jsonld)]
+* [vocabulary](./vocabulary.jsonld) [[jsonld](./vocabulary.jsonld)] [[ttl](./vocabulary.ttl)]
 * [context](./context.jsonld) 
 
 These files are maintained on [`github.com/mosaicrown/ns`](https://github.com/mosaicrown/ns).

@@ -1,0 +1,59 @@
+# generated from vocabulary.jsonld
+@prefix :      <https://mosaicrown.github.io/ns#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+
+:marketing  a             :Purpose , skos:Concept ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Marketing"@en ;
+        skos:definition   "A marketing purpose"@en .
+
+:institutional  a         :Purpose , skos:Concept ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Institutional"@en ;
+        skos:definition   "An institutional purpose"@en .
+
+:belongsTo  a             owl:ObjectProperty , owl:TransitiveProperty , rdf:Property , skos:Concept ;
+        rdfs:domain       odrl:Party ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Belongs To"@en ;
+        rdfs:range        odrl:Party ;
+        skos:definition   "An Assignee transitively asserts that another Assigne encompasses its operational permissions."@en ;
+        skos:note         "The purpose is to explicitly assert that the semantics of the referenced instance of an other Assignee encompasses (includes) the semantics of this instance of Assignee. The belongsTo property is transitive, and as such, the permissions form ancestor relationships."@en .
+
+:declinationOf  a         skos:Concept , rdf:Property , owl:TransitiveProperty , owl:ObjectProperty ;
+        rdfs:domain       :Purpose ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Declination Of"@en ;
+        rdfs:range        :Purpose ;
+        skos:definition   "A Purpose transitively asserts that another Purpose encompasses its operational semantics."@en ;
+        skos:note         "The goal is to explicitly assert that the semantics of the referenced instance of an other Purpose encompasses (includes) the semantics of this instance of Purpose. The declinationOf property is transitive, and as such, the purposes form ancestor relationships."@en .
+
+:sellreport  a            odrl:Action , skos:Concept ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Sellreport"@en ;
+        skos:definition   "The Action to sell a report of a target"@en ;
+        odrl:includedIn   odrl:sell .
+
+:purpose  a               skos:Concept , owl:ObjectProperty , rdf:Property ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( odrl:Rule odrl:Policy )
+                          ] ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Has Purpose"@en ;
+        rdfs:range        :Purpose ;
+        skos:definition   "The purpose on which the Rule is being subjected."@en .
+
+:Purpose  a               skos:Concept , owl:Class , rdfs:Class ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Purpose"@en ;
+        skos:definition   "The purpose of an (intended) action on a resource."@en .
+
+:statistical  a           :Purpose , skos:Concept ;
+        rdfs:isDefinedBy  <https://mosaicrown.github.io/ns/vocabulary.jsonld> ;
+        rdfs:label        "Statistical"@en ;
+        skos:definition   "A statistical purpose"@en .
